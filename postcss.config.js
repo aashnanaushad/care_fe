@@ -2,8 +2,9 @@
 const cssnano = require("cssnano");
 const purgecss = require("@fullhuman/postcss-purgecss")({
   content: ["./public/**/*.html", "./src/**/*.js", "./src/**/*.jsx"],
-  efaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
+  defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
 });
+console.log("PostCSS: " + process.env.NODE_ENV)
 module.exports = {
   plugins: [
     require("tailwindcss"),

@@ -80,8 +80,10 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "PORT=4000 react-scripts start",
-    "build": "react-scripts build"
+    "purge:css": "cross-env NODE_ENV=production postcss src/tailwind.css -o src/index.css",
+    "build:css": "postcss src/tailwind.css -o src/index.css",
+    "start": "npm run build:css && PORT=4000 react-scripts start",
+    "build": "npm run purge:css && react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -103,6 +105,7 @@
     "@types/mocha": "^5.2.7",
     "autoprefixer": "^9.7.6",
     "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "cypress": "^4.4.0",

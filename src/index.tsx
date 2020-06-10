@@ -8,7 +8,7 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
 import * as Sentry from "@sentry/browser";
-import './tailwind.css'
+import './index.css'
 const store = createStore(reducer, applyMiddleware(thunk));
 
 Sentry.init({
