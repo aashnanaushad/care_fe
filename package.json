@@ -60,7 +60,7 @@
     "lodash": "^4.17.15",
     "mini-css-extract-plugin": "0.8.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "pnotify": "^4.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -69,6 +69,7 @@
     "react-phone-input-2": "^2.12.1",
     "react-redux": "^7.1.1",
     "react-scripts": "3.3.1",
+    "react-static-plugin-tailwindcss": "^0.1.3",
     "react-virtualized": "^9.21.2",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
@@ -79,8 +80,8 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "./node_modules/.bin/webpack --mode=production"
+    "start": "PORT=4000 react-scripts start",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -98,13 +99,12 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "concurrently": "^5.1.0",
-    "postcss-cli": "^7.1.0",
-    "cssnano": "^4.1.10",
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@types/mocha": "^5.2.7",
+    "autoprefixer": "^9.7.6",
+    "concurrently": "^5.1.0",
     "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
     "cypress": "^4.4.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -115,6 +115,8 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "http-proxy-middleware": "^1.0.4",
+    "postcss-cli": "^7.1.0",
     "redux-devtools-extension": "^2.13.8",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.0",

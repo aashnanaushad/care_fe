@@ -3,7 +3,7 @@ import LocationPicker from "react-leaflet-location-picker";
 import Popover from '@material-ui/core/Popover';
 import axios from 'axios';
 import { makeStyles } from "@material-ui/styles";
-import { TextInputField } from "../Common/HelperInputFields"
+import { TextInputField } from "./HelperInputFields"
 
 const DEFAULT_MARKER_RADIUS = 100;
 const KEYS = {
@@ -70,6 +70,7 @@ export const LocationSearchAndPick = (props: LocationSearchAndPickProps) => {
 
     const renderLocationResults = () => {
         const locResultListOpen = Boolean(searchResultAnchorEl);
+        // eslint-disable-next-line no-restricted-globals
         const searchResultPopoverId = open ? 'search-result-popover' : undefined;
         return (<Popover
             id={searchResultPopoverId}
